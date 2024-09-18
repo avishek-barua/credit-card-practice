@@ -40,10 +40,10 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
 }
-
+/* 
 body {
   height: 500rem;
-}
+} */
 
 section {
   margin: 0 auto;
@@ -317,6 +317,125 @@ section {
   color: var(--light-color);
   font-size: 1.6rem;
   line-height: 1.8rem;
+}
+
+.options {
+  background: var(--bg-color);
+}
+
+.options .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.options .box-container .box {
+  border-radius: 0.5rem;
+  border-color: var(--white);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.options .box-container .box img {
+  height: 20rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  transform: translateY(-5rem);
+  object-fit: cover;
+}
+
+.options .box-container .box:hover img {
+  transform: translateY(-7rem);
+}
+
+.options .box-container .box h3 {
+  margin-top: -4rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.options .box-container .box p {
+  padding: 0.2rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  font-size: 1.6rem;
+}
+
+.options .box-container .box .info {
+  border-top: var(--border);
+  margin-top: 0.15rem;
+  padding: 1rem 0;
+}
+
+.options .box-container .box .info span {
+  color: var(--black);
+}
+
+.steps .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.steps .box-container .box {
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.steps .box-container .box::before {
+  content: "01";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+  font-size: 5rem;
+}
+
+.steps .box-container .box:hover::before {
+  top: 1rem;
+  left: 1rem;
+  height: 5rem;
+  width: 6rem;
+  font-size: 2.5rem;
+}
+
+.steps .box-container .box:nth-child(2)::before{
+  content: '02';
+}
+
+.steps .box-container .box:nth-child(3)::before{content: '03';}
+
+.steps .box-container .box img {
+  height: 7rem;
+}
+
+.steps .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin: 1rem 0;
+}
+
+.steps .box-container .box p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--light-color);
 }
 
 @keyframes float {
